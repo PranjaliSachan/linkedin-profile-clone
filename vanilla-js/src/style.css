@@ -27,6 +27,9 @@ body {
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 
 .header-icon,
