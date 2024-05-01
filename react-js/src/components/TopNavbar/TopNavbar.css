@@ -1,0 +1,112 @@
+#name-pranjali {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.italic-name {
+    font-style: italic;
+}
+
+.name-kush {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.header-icon,
+.header-search {
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 2px;
+}
+
+.header-icon i {
+    font-size: 44px;
+    color: #0a66c2;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-list li {
+    display: block;
+    text-align: center;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 2px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(0 0 0/.6);
+}
+
+.nav-list li button,
+.search-button {
+    background-color: white;
+    border: none;
+}
+
+.profile-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-btn img {
+    border-radius: 12px;
+}
+
+.search-button div i {
+    font-size: 20px;
+    color: rgb(0 0 0/.6);
+}
+
+.search-button-text,
+.profile-btn-text {
+    margin-top: 6px;
+}
+
+.for-business-icon,
+.for-business-text,
+.profile-btn-text,
+.search-button-text {
+    color: rgb(0 0 0/.6);
+}
+
+.for-business-text,
+.profile-btn-text span,
+.nav-list li a span,
+.search-button-text span {
+    font-size: 14px !important;
+}
+
+nav {
+    margin: 0 6px 0 6px;
+    padding: 2px;
+}
+
+.nav-list .home,
+.nav-list .network,
+.nav-list .jobs {
+    min-width: 52px;
+}
