@@ -129,7 +129,8 @@
     </header>
 
     <div class="layout-container">
-        <div class="hero">
+        <!-- hero -->
+        <div class="card-container">
             <div class="card">
                 <div class="hero-img-container">
                     <div>
@@ -154,9 +155,10 @@
             </div>
         </div>
 
-        <div class="about">
+        <!-- about -->
+        <div class="card-container">
             <div class="card">
-                <div class="about-header">
+                <div class="card-header">
                     <h2 class="header-title">About</h2>
                     <div class="about-header-edit">
                         <button id="edit-about-dialog-open-btn" class="icon-btn">
@@ -192,14 +194,64 @@
                         </dialog>
                     </div>
                 </div>
-                <div class="about-content">
+                <div class="card-content">
                     <p id="about-content-text" class="truncate-content"></p>
                     <button id="about-content-see-more-btn" class="see-more">see more</button>
                 </div>
             </div>
         </div>
+
+        <!-- experiences -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="header-title">Experience</h2>
+                </div>
+                <div class="card-content">
+                    <ul id="experience-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- education -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="header-title">Education</h2>
+                </div>
+                <div class="card-content">
+                    <ul id="education-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- certifications -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="header-title">Certification</h2>
+                </div>
+                <div class="card-content">
+                    <ul id="certifications-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- skills -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="header-title">Skills</h2>
+                </div>
+                <div class="card-content">
+                    <ul id="skills-list"></ul>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- scripts -->
+    <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 

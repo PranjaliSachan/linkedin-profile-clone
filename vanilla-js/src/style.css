@@ -149,12 +149,13 @@ nav {
     min-width: 52px;
 }
 
+/* TODO: style not applying */
 .layout-container {
-    margin-top: 180px;
+    padding-top: 600px;
+    padding-bottom: 40px;
 }
 
-.layout-container .hero,
-.layout-container .about {
+.layout-container .card-container {
     margin-top: 0.8rem;
     padding-bottom: 1.2rem;
 }
@@ -167,7 +168,7 @@ nav {
     flex-direction: column;
 }
 
-.about-header {
+.card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -181,11 +182,11 @@ nav {
     color: var(--color-text);
 }
 
-.about-content {
+.card-content {
     padding: 1.2rem 2.4rem 1.2rem 2.4rem;
 }
 
-.about-content p {
+.card-content p {
     margin-block-end: 0;
     margin-top: 0;
 }
