@@ -88,27 +88,59 @@ editAboutDialogSaveBtn.addEventListener(
 const experienceList = document.getElementById('experience-list'); // <ul> </ul> : parent
 for (var i = 0; i < experiences.length; i++) {
     const li = document.createElement('li');    // <li> </li> : child
-    li.innerText = experiences[i]['role'];      // insert some content into child
+    li.classList.add('list-item');          // apply li styles using class name
+    const template = getExperienceTemplate(experiences[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
     experienceList.appendChild(li);             // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (experiences.length - 1)
+    if (i < (experiences.length - 1)) {
+        const hr = document.createElement('hr');
+        experienceList.appendChild(hr);
+    }
 }
 
 const educationList = document.getElementById('education-list'); // <ul> </ul> : parent
 for (var i = 0; i < education.length; i++) {
     const li = document.createElement('li');    // <li> </li> : child
-    li.innerText = education[i]['name'];        // insert some content into child
+    li.classList.add('list-item');              // apply li styles using class name
+    const template = getEducationTemplate(education[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
     educationList.appendChild(li);              // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (certifications.length - 1)
+    if (i < (education.length - 1)) {
+        const hr = document.createElement('hr');
+        educationList.appendChild(hr);
+    }
 }
 
 const certificationsList = document.getElementById('certifications-list'); // <ul> </ul> : parent
 for (var i = 0; i < certifications.length; i++) {
     const li = document.createElement('li');    // <li> </li> : child
-    li.innerText = certifications[i]['title'];  // insert some content into child
+    li.classList.add('list-item');              // apply li styles using class name
+    const template = getCertificationTemplate(certifications[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
     certificationsList.appendChild(li);         // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (certifications.length - 1)
+    if (i < (certifications.length - 1)) {
+        const hr = document.createElement('hr');
+        certificationsList.appendChild(hr);
+    }
 }
 
 const skillsList = document.getElementById('skills-list'); // <ul> </ul> : parent
 for (var i = 0; i < skills.length; i++) {
     const li = document.createElement('li');    // <li> </li> : child
-    li.innerText = skills[i];                   // insert some content into child
+    li.classList.add('list-item');              // apply li styles using class name
+    const template = getSkillTemplate(skills[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
     skillsList.appendChild(li);                 // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (skills.length - 1)
+    if (i < (skills.length - 1)) {
+        const hr = document.createElement('hr');
+        skillsList.appendChild(hr);
+    }
 }

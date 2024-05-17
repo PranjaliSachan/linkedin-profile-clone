@@ -108,7 +108,7 @@ if (!(localStorage.getItem('certifications'))) {
             grantor: "EC-Council",
             issuedOn: "Feb 2024",
             credentialId: "297528",
-            link: ""
+            link: "https://media.licdn.com/dms/image/D4E2DAQEO2wipjBgDug/profile-treasury-image-shrink_800_800/0/1708368407643?e=1716519600&v=beta&t=L9FbeFvhMZBpONGWyFisTIsG_FiWNfpCTBC4nHjPvcY"
         },
     ];
 
