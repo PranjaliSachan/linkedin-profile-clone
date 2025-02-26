@@ -127,6 +127,80 @@
             </ul>
         </nav>
     </header>
+
+    <div class="layout-container">
+        <div class="hero">
+            <div class="card">
+                <div class="hero-img-container">
+                    <div>
+                        <img src="assets/linkedin-background.svg" alt="Background Image" class="hero-background-img">
+                    </div>
+                    <div>
+                        <img src="assets/profile-image.jpeg" alt="Profile Image" width="152" height="152"
+                            class="hero-profile-img">
+                    </div>
+                </div>
+                <div class="hero-details-container">
+                    <div class="hero-details-name">
+                        <h1>Pranjali Sachan</h1>
+                        <span>(she/her)</span>
+                    </div>
+                    <div class="hero-details-tagline">Software Developer | Front End | Cyber Security</div>
+                    <div class="hero-details-addr">
+                        Columbus, Ohio Metropolitan Area <button class="hero-details-contact-btn">Contact info</button>
+                    </div>
+                    <div class="hero-details-additional"><button class="hero-details-more-btn">More</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="card">
+                <div class="about-header">
+                    <h2 class="header-title">About</h2>
+                    <div class="about-header-edit">
+                        <button id="edit-about-dialog-open-btn" class="icon-btn">
+                            <i class="bi bi-pencil icon"></i>
+                        </button>
+                        <dialog id="edit-about-dialog" class="modal">
+                            <!-- dialog header section -->
+                            <div class="modal-header">
+                                <div>
+                                    <h2 class="header-title">Edit About</h2>
+                                </div>
+                                <div>
+                                    <button id="edit-about-dialog-close-btn" class="icon-btn" autofocus>
+                                        <i class="bi bi-x-lg icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- dialog main body -->
+                            <div class="modal-body">
+                                <div>
+                                    <label for="edit-about-textbox" class="edit-about-textbox-label">
+                                        You can write about your years of experience, industry, or skills. People also
+                                        talk about their achievements or previous job experiences.
+                                    </label>
+                                    <textarea type="text" name="edit-about-textbox" id="edit-about-textbox" rows="6"
+                                        maxlength="2600"></textarea>
+                                </div>
+                            </div>
+                            <!-- dialog footer -->
+                            <div class="modal-footer">
+                                <button class="modal-footer-save-btn" id="edit-about-dialog-save-btn">Save</button>
+                            </div>
+                        </dialog>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p id="about-content-text" class="truncate-content"></p>
+                    <button id="about-content-see-more-btn" class="see-more">see more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
