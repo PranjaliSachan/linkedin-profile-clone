@@ -1,26 +1,8 @@
 /**
- * Globals (In memory) AND &&, OR ||, NOT !
- */
-var aboutText; // declaration - value is not assigned to variable
-if (!(localStorage.getItem('aboutText'))) { // if aboutText is not there in localStorage
-    aboutText = "Currently pursuing a Master's in Information Technology from Franklin University, specializing in Frontend Development, Cybersecurity, and Project Management. Skilled in front end UI development using vanilla JavaScript, Angular, React, Bootstrap, Tailwind CSS, and more for crafting seamless user experiences. I thrive on creating dynamic and secure web applications while adhering to industry best practices. I am committed to safeguarding digital assets and user data through robust cybersecurity measures. Experienced in penetration testing, network troubleshooting, and implementing security protocols. Equipped with project management expertise, adept at coordinating recruitment projects, optimizing workflows, and driving continuous improvement initiatives. Let's connect and explore opportunities to collaborate!";
-    localStorage.setItem('aboutText', aboutText);
-} else {
-    aboutText = localStorage.getItem('aboutText');
-}
-/**
- * LocalStorage | SessionStorage (In Browser - kind of permanent, no guarantee)
- * 
- * Item : { key: value }
- */
-
-
-/**
  * Set Content on Page
  */
 const aboutContentText = document.getElementById('about-content-text'); // <p> about content
 aboutContentText.innerText = aboutText;
-
 
 /**
  * We want to get see more button -
@@ -99,3 +81,66 @@ editAboutDialogSaveBtn.addEventListener(
         aboutContentText.innerText = aboutText; // update about content text on main page
     }
 )
+
+/**
+ * Experience, Education, Certifications, Skills Lists
+ */
+const experienceList = document.getElementById('experience-list'); // <ul> </ul> : parent
+for (var i = 0; i < experiences.length; i++) {
+    const li = document.createElement('li');    // <li> </li> : child
+    li.classList.add('list-item');          // apply li styles using class name
+    const template = getExperienceTemplate(experiences[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
+    experienceList.appendChild(li);             // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (experiences.length - 1)
+    if (i < (experiences.length - 1)) {
+        const hr = document.createElement('hr');
+        experienceList.appendChild(hr);
+    }
+}
+
+const educationList = document.getElementById('education-list'); // <ul> </ul> : parent
+for (var i = 0; i < education.length; i++) {
+    const li = document.createElement('li');    // <li> </li> : child
+    li.classList.add('list-item');              // apply li styles using class name
+    const template = getEducationTemplate(education[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
+    educationList.appendChild(li);              // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (certifications.length - 1)
+    if (i < (education.length - 1)) {
+        const hr = document.createElement('hr');
+        educationList.appendChild(hr);
+    }
+}
+
+const certificationsList = document.getElementById('certifications-list'); // <ul> </ul> : parent
+for (var i = 0; i < certifications.length; i++) {
+    const li = document.createElement('li');    // <li> </li> : child
+    li.classList.add('list-item');              // apply li styles using class name
+    const template = getCertificationTemplate(certifications[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
+    certificationsList.appendChild(li);         // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (certifications.length - 1)
+    if (i < (certifications.length - 1)) {
+        const hr = document.createElement('hr');
+        certificationsList.appendChild(hr);
+    }
+}
+
+const skillsList = document.getElementById('skills-list'); // <ul> </ul> : parent
+for (var i = 0; i < skills.length; i++) {
+    const li = document.createElement('li');    // <li> </li> : child
+    li.classList.add('list-item');              // apply li styles using class name
+    const template = getSkillTemplate(skills[i]); // template string with data
+    li.innerHTML = template;                    // convert the template string to HTML
+    skillsList.appendChild(li);                 // append to parent <ul> </ul> : parent
+
+    // add divider <hr> till (skills.length - 1)
+    if (i < (skills.length - 1)) {
+        const hr = document.createElement('hr');
+        skillsList.appendChild(hr);
+    }
+}
